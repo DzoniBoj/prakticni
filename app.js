@@ -37,3 +37,21 @@ function rotiraj()
 	if(slika.src.includes("pobednik1.jpg")) slika.src = "pobednik2.jpg";
 	else slika.src = "pobednik1.jpg";
 }
+function boja(b)
+{
+	const par = document.querySelector("#v");
+	par.style.color = b;
+}
+let velicina = 16;
+function tekst(oznaka){
+	if(oznaka === "+")
+	{
+		velicina++;
+		document.querySelector("#v").style.fontSize = velicina + "px";
+	}
+	else {
+    velicina--;
+    velicina = Math.max(0, velicina); // da ne bi dobili negativnu vrednost
+    document.querySelector("#tekst").style.fontSize = velicina - 1 + "px";
+  }
+}
